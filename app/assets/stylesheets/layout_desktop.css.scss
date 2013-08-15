@@ -3,11 +3,15 @@
 */
 @media all and (min-width:900px) {
 
-    .header { width:900px; margin:auto; }
+    .header { 
 
-    .header .logo { width:40%; }
-    .header .score { width:20%; }
-    .header .menu { width:40%; float:right; }
+        width:900px;
+        margin:auto;
+
+        .logo { width:40%; }
+        .score { width:20%; }
+        .menu { width:40%; float:right; }
+    }
 
     h1 { margin:0; }
     .subtitle { color:#F6F6F6; font-size: 0.8em; visibility: visible;}
@@ -28,5 +32,12 @@
             color:#FFF;
         }
     }
+
+}
+
+@media all and (min-width:470px) {
+
+    .guessBox .imageWrapper { float:left; width:200px; margin-right:10px; }
+    .chooseList { width:230px; float:left; }
 
 }
