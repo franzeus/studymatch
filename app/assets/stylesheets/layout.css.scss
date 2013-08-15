@@ -145,6 +145,7 @@ h2 { font-size: 1em; }
 /* Nav */
 .nav {
     position: absolute;
+    display: none;
     width:80%;
     top:120px;
     left:50%;
@@ -166,6 +167,7 @@ h2 { font-size: 1em; }
 }
 
 .nav.slideTop {
+    display: block;
     opacity: 0;
     z-index:1;
     -webkit-animation-duration: 0.6s;
@@ -180,7 +182,7 @@ h2 { font-size: 1em; }
 }
 
 @-webkit-keyframes slideTop { from { margin-top: -200%; }  to { margin-top: 0%; opacity: 1; } }
-@keyframes slideTop { from { margin-top: -200%; }  to { margin-top: 0%; } }
+@keyframes slideTop { from { margin-top: -200%; }  to { margin-top: 0%; opacity: 1; } }
 
 .nav li:hover {
     background:#666;
