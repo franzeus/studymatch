@@ -81,14 +81,14 @@ ul {
 .header {
     background:#7c9c27;
     border-bottom:5px solid #CCC;
-    height:65px;
+    height:50px;
     z-index: 200;
     position: relative;
 }
 
 .header li {
     float:left;
-    background:#7c9c27; margin-left:0px; height:65px;
+    background:#7c9c27; margin-left:0px; height:50px;
 }
 
 .header .logo {
@@ -106,7 +106,7 @@ ul {
 }
 
 h1 {
-    margin:10px 0; padding:0;
+    margin:4px 0; padding:0;
     color:#F6F6F6;
     font-size:1.4em;
     font-weight: normal;
@@ -114,7 +114,8 @@ h1 {
 
 h1 .secondColor { color:#ABCC54; }
 
-h2 { font-size: 1em; }
+h2 { font-size: 1.2em; }
+h3 { font-size: 1em; }
 
 .subtitle { visibility: hidden; }
 
@@ -132,7 +133,7 @@ h2 { font-size: 1em; }
 .scoreWrapper { text-align: center; height:100%; border-left:1px solid #333; }
 .scoreTitle {
     display: block;
-    padding-top:8px;
+    padding-top:3px;
     font-size: 0.8em; color:#FFF;
 }
 .scoreValue {
@@ -159,11 +160,18 @@ h2 { font-size: 1em; }
     float: none;
     text-align: left;
     height:auto;
-    padding:25px;
-    background:#333;    
+    padding:0px;
+    background:#333;
     border-bottom:1px solid #222;
     border-left:5px solid #666;
     color:#F6F6F6;
+}
+
+.nav li a {
+    text-decoration: none;
+    padding:25px;
+    color:#F6F6F6;
+    display: block;
 }
 
 .nav.slideTop {
@@ -200,7 +208,7 @@ h2 { font-size: 1em; }
 
 /* The menu icon as divs */
 .menuIconWrapper {
-    margin-top:16px;
+    margin-top:10px;
     height:32px; width:32px;
     overflow: hidden;
     position: relative;
