@@ -21,15 +21,17 @@
     .container { margin:auto; width:900px; }
 
     /* Nav */
-    .nav { 
-        position:static; display:block; padding-top:18px; margin:auto; width:260px;
+    .nav {
+        border:0;
+        position:static; display:block; padding-top:18px; margin:auto; width:300px;
         
         li {
             background:none; border:none;
             float:left;
-            margin-top:1px;
+            margin-right:1em;
             font-weight: bold; 
             color:#FFF;
+            padding:0;
         }
     }
 
