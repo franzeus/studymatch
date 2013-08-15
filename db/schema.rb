@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 20130815102344) do
   end
 
   create_table "votes", force: true do |t|
+    t.integer  "creator_id"
+    t.integer  "subject_id"
+    t.boolean  "correct"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
