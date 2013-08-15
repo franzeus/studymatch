@@ -1,0 +1,45 @@
+/*
+    Styles for screen width >= 900px
+*/
+@media all and (min-width:900px) {
+
+    .header { 
+
+        width:900px;
+        margin:auto;
+
+        .logo { width:40%; }
+        .score { width:20%; }
+        .menu { width:40%; float:right; }
+    }
+
+    h1 { margin:0; }
+    .subtitle { color:#F6F6F6; font-size: 0.8em; visibility: visible;}
+
+    .menuIcon { visibility: hidden; display: none; }
+
+    .container { margin:auto; width:900px; }
+
+    /* Nav */
+    .nav {
+        border:0;
+        position:static; display:block; padding-top:18px; margin:auto; width:300px;
+        
+        li {
+            background:none; border:none;
+            float:left;
+            margin-right:1em;
+            font-weight: bold; 
+            color:#FFF;
+            padding:0;
+        }
+    }
+
+}
+
+@media all and (min-width:470px) {
+
+    .guessBox .imageWrapper { float:left; width:200px; margin-right:10px; }
+    .chooseList { width:230px; float:left; }
+
+}

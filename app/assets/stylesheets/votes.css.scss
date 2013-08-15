@@ -1,3 +1,27 @@
 // Place all the styles related to the votes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* Guess-box */
+.guessBox {
+
+    width:100%;
+
+ 	.imageWrapper {  text-align:center; background:#F6F6F6; padding:1em; margin-bottom:1em; border-radius: 4px; }
+	img { margin:auto; max-width:100%;  }
+
+	.chooseList li { margin-bottom: 3px; }
+
+	.chooseList button {
+		padding:8px;
+	    background:#F6F6F6;
+	    border:0;
+	    width:100%;
+	    text-align: left;
+	    border-left:6px solid #FFBF00;
+	}
+
+	.chooseList button:hover {
+    	border-left:6px solid #7c9c27;
+    	color:#7c9c27;
+    }
+}
