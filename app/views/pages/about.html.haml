@@ -12,8 +12,16 @@
     %p
         =I18n.t('about.about_us_text')
 
-    =image_tag "https://profile-a.xx.fbcdn.net/hprofile-prn2/186571_588380875_377587963_q.jpg"
-    =image_tag "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/41646_742197780_2702148_q.jpg"
+    %ul.developerPics
+        %li
+            = link_to "http://www.fidrelity.at" do
+                =image_tag "https://profile-a.xx.fbcdn.net/hprofile-prn2/186571_588380875_377587963_q.jpg"
+                Andre
+    
+        %li                
+            = link_to "http://www.weberdevelopment.de" do
+                =image_tag "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/41646_742197780_2702148_q.jpg"
+                Francois
 
     %h3
         =I18n.t('about.contact_title')
