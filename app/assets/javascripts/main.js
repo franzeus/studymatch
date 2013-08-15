@@ -41,7 +41,8 @@ function toggleNavigation() {
 };
 
 function hideNavigation() {
-	$('.nav').hide();
+	toggleModal(false);
+	$('.nav').removeClass('slideTop');
 };
 
 function bindDocumentEvents() {
@@ -58,4 +59,13 @@ function bindDocumentEvents() {
 
 $(document).ready(function() {
 	bindDocumentEvents();
+});
+
+$(document).on('page:load', function() {
+	hideNavigation();
+	bindDocumentEvents();
+});
+
+$(document).on('page:restore', function() {
+	hideNavigation();
 });
