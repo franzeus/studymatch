@@ -189,8 +189,8 @@ h3 { font-size: 1em; }
     transition-timing-function: linear;
 }
 
-@-webkit-keyframes slideTop { from { margin-top: -200%; }  to { margin-top: 0%; opacity: 1; } }
-@keyframes slideTop { from { margin-top: -200%; }  to { margin-top: 0%; opacity: 1; } }
+@-webkit-keyframes slideTop { from { margin-top: -200%; }  to { margin-top: -12%; opacity: 1; } }
+@keyframes slideTop { from { margin-top: -200%; }  to { margin-top: -12%; opacity: 1; } }
 
 .nav li:hover {
     background:#666;
