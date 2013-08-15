@@ -1,1 +1,15 @@
-i'm here
+.guessBox
+    %h2
+        =I18n.t('vote.title')
+
+    .imageWrapper
+        =image_tag "http://64.62.211.219/admin/upload/wallpaper/2013062213718880691314211267.jpg", { :class => "profileImage" }
+
+    %ul.chooseList
+        %li
+            %button{ :value => "1" }
+                Multimedia-Technology
+            %button{ :value => "2" }
+                Chemie
+            %button{ :value => "3" }
+                Pharmazie

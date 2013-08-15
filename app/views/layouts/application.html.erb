@@ -8,7 +8,50 @@
 </head>
 <body>
 
-<%= yield %>
+	<!--
+        HEADER
+    -->
+    <ul class="header">
+        <li class="logo">
+            <div class="logoWrapper">
+                <h1>study<span class="secondColor">Match</span></h1>
+                <span class="subtitle">Klischee ole oder doch nicht?</span>
+            </div>
+        </li>
+        <li class="score">
+            <div class="scoreWrapper">
+                <span class="scoreTitle">score</span>
+                <span class="scoreValue">301</span>
+            </div>
+        </li>
+        <li class="menu">
+            
+            <div class="menuWrapper">
+
+                <!-- Nav button - only mobile -->
+                <button class="menuIcon" type="button">
+                    <div class="menuIconWrapper">
+                        <div class="rect" style="top:5px;"></div>
+                        <div class="rect" style="top:12px;"></div>
+                        <div class="rect" style="top:19px;"></div>
+                    </div>
+                </button>
+
+                <ul class="nav">
+                    <li>Login</li>
+                    <li>About</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+    <!--
+        CONTENT
+    -->
+    <div class="container">
+		<%= yield %>
+	</div>
 
 </body>
 </html>
