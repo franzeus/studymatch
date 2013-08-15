@@ -102,7 +102,7 @@ ul {
 
 .header .score {
     width:20%;
-    background:#666;
+    background:#CCC;
 }
 
 h1 {
@@ -115,7 +115,7 @@ h1 {
 h1 .secondColor { color:#ABCC54; }
 
 h2 { font-size: 1.2em; }
-h3 { font-size: 1em; }
+h3 { font-size: 1em; margin: 2em 0 0.5em 0; }
 
 .subtitle { display: none; }
 
@@ -130,7 +130,18 @@ h3 { font-size: 1em; }
 
 .menuIcon { border:0; background:none; width:32px; height:32px; }
 
-.scoreWrapper { text-align: center; height:100%; border-left:1px solid #333; }
+.scoreWrapper { 
+    text-align: center; height:100%; border-left:1px solid #333;
+    position: relative;
+}
+
+.loginLink {
+    display: inline-block;
+    padding-top:16px;
+    background: url('login.png') center center no-repeat;
+    width:32px; height:32px;
+}
+
 .scoreTitle {
     display: block;
     padding-top:3px;
