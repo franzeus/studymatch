@@ -12,14 +12,14 @@ function toggleModal(show) {
 		// Create and append modal to body
 		} else {
 			var modal = $('<div class="modal"></div>');
-			$('body').append(modal);
+			$('.container').append(modal);
 		}
 
-		var windowObj = $(window);
+		var windowObj = $(window)[0];
 
 		modal.css({
-			width: windowObj.width(),
-			height: windowObj.height()
+			width: windowObj.innerWidth,
+			height: windowObj.outerHeight
 		});
 
 	// Remove modal
