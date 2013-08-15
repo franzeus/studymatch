@@ -20,6 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  
+  login: "Login"
+
   # VOTE
   vote:
     title: "Make your guess ..."
@@ -31,3 +34,8 @@ en:
     game: "On StudyMatch you can guess a persons study based on his or her picture."
     about_us_title: "About us"
     about_us_text: "StudyMatch was created in 2011 by two Austrian students, who played that game first in real life - guessing the study of passing students. In 2013 we decided to have a relaunch and optimize this app for mobile and non-german speaking people. We hope you have as much fun as we have :)"
+
+  # FAQ
+  faq:
+    nav_title: "FAQ"
+    title: "You have questions"

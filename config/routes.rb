@@ -8,6 +8,7 @@ Studymatch::Application.routes.draw do
   root 'votes#new'
 
   get 'about' => 'pages#about'
+  get 'faq' => 'pages#faq'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

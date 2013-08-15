@@ -43,9 +43,9 @@
                 </button>
 
                 <ul class="nav">
-                    <li><a href="#">Login</a></li>
+                    <li><%= link_to I18n.t("login"), about_path %></li>
                     <li><%= link_to I18n.t("about.nav_title"), about_path %></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><%= link_to I18n.t("faq.nav_title"), faq_path %></li>
                 </ul>
             </div>
         </li>
