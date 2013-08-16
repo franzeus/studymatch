@@ -59,6 +59,13 @@
         CONTENT
     -->
     <div class="container">
+        <div data-no-turbolink>
+            <% if current_user %>
+                <%= link_to "Logout", :logout %>
+            <% else %>
+            <%= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook) %>
+            <% end %>
+        </div>   
     	<div class="content">
 			<%= yield %>
 		</div>

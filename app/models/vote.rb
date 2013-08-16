@@ -7,6 +7,7 @@ class Vote < ActiveRecord::Base
   validates :creator, presence: true 
   validates :subject, presence: true
 
+  after_initialize :select_subject
   before_create :is_correct?
 
   def is_correct?
@@ -17,5 +18,9 @@ class Vote < ActiveRecord::Base
     #select 2 random studies
     answers = Study.where("id != ?", study.id).order("RANDOM()").limit(2)
     (answers << study).shuffle
+  end
+
+  def select_subject
+    self.subject = Student.votable.where('id != ?', (creator_id || false)).order("RANDOM()").first
   end
 end
