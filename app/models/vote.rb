@@ -12,4 +12,10 @@ class Vote < ActiveRecord::Base
   def is_correct?
     self.correct = self.subject.study == self.study
   end
+
+  def answers
+    #select 2 random studies
+    answers = Study.where("id != ?", study.id).order("RANDOM()").limit(2)
+    (answers << study).shuffle
+  end
 end
