@@ -102,7 +102,7 @@ ul {
 
 .header .score {
     width:20%;
-    background:#666;
+    background:#CCC;
 }
 
 h1 {
@@ -115,9 +115,9 @@ h1 {
 h1 .secondColor { color:#ABCC54; }
 
 h2 { font-size: 1.2em; }
-h3 { font-size: 1em; }
+h3 { font-size: 1em; margin: 2em 0 0.5em 0; }
 
-.subtitle { visibility: hidden; }
+.subtitle { display: none; }
 
 /* Header LIs content */
 .logoWrapper { padding:8px; }
@@ -130,7 +130,18 @@ h3 { font-size: 1em; }
 
 .menuIcon { border:0; background:none; width:32px; height:32px; }
 
-.scoreWrapper { text-align: center; height:100%; border-left:1px solid #333; }
+.scoreWrapper { 
+    text-align: center; height:100%; border-left:1px solid #333;
+    position: relative;
+}
+
+.loginLink {
+    display: inline-block;
+    padding-top:16px;
+    background: url('login.png') center center no-repeat;
+    width:32px; height:32px;
+}
+
 .scoreTitle {
     display: block;
     padding-top:3px;
@@ -189,22 +200,25 @@ h3 { font-size: 1em; }
     transition-timing-function: linear;
 }
 
-@-webkit-keyframes slideTop { from { margin-top: -200%; }  to { margin-top: 0%; opacity: 1; } }
-@keyframes slideTop { from { margin-top: -200%; }  to { margin-top: 0%; opacity: 1; } }
+@-webkit-keyframes slideTop { from { margin-top: -200%; }  to { margin-top: -5%; opacity: 1; } }
+@keyframes slideTop { from { margin-top: -200%; }  to { margin-top: -5%; opacity: 1; } }
 
 .nav li:hover {
     background:#666;
 }
 
-.modal { z-index:0; width: 100%; height:100%; position:absolute; left:0; top:0; opacity: 0.8; background: #FFF; }
+.modal { z-index:0; width: 100%; height:100%; position:absolute; left:0; top:0; opacity: 0.8; background: #2c3e50; }
 
 /* Content */
 .container {
     margin-top:1em;
-    width:90%;
+    width:100%;    
     overflow: hidden;
     margin:auto;
+    position: relative;
 }
+
+.content { padding: 0em 1em; }
 
 /* The menu icon as divs */
 .menuIconWrapper {

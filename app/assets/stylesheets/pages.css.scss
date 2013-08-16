@@ -1,0 +1,17 @@
+.aboutWrapper {
+	text-align: justify;
+	padding-bottom: 2em;
+}
+
+.developerPics { overflow: hidden; }
+
+.developerPics li {
+	background:#7f8c8d;
+	float:left;
+	width:50%;
+}
+
+.developerPics li:first-child { background:#7f8c8d; width:49%; margin-right:2px; }
+
+.developerPics li img { margin-right:10px; }
+.developerPics li a { text-decoration: none; color:#FFF; display: block; }

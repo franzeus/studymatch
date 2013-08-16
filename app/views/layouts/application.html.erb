@@ -25,8 +25,12 @@
         </li>
         <li class="score">
             <div class="scoreWrapper">
+            	<a href="#" class="loginLink"></a>
+        	
+        	<!--
                 <span class="scoreTitle">score</span>
                 <span class="scoreValue">301</span>
+                -->
             </div>
         </li>
         <li class="menu">
@@ -43,9 +47,9 @@
                 </button>
 
                 <ul class="nav">
-                    <li><a href="#">Login</a></li>
+                	<li><%= link_to I18n.t("vote.nav_title"), new_vote_path %></li>
                     <li><%= link_to I18n.t("about.nav_title"), about_path %></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><%= link_to I18n.t("faq.nav_title"), faq_path %></li>
                 </ul>
             </div>
         </li>
@@ -55,7 +59,9 @@
         CONTENT
     -->
     <div class="container">
-		<%= yield %>
+    	<div class="content">
+			<%= yield %>
+		</div>
 	</div>
 
 </body>

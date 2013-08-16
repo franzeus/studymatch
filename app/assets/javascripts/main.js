@@ -12,14 +12,14 @@ function toggleModal(show) {
 		// Create and append modal to body
 		} else {
 			var modal = $('<div class="modal"></div>');
-			$('body').append(modal);
+			$('.container').append(modal);
 		}
 
-		var windowObj = $(window);
+		var windowObj = $(window)[0];
 
 		modal.css({
-			width: windowObj.width(),
-			height: windowObj.height()
+			width: windowObj.innerWidth,
+			height: windowObj.outerHeight
 		});
 
 	// Remove modal
@@ -50,11 +50,8 @@ function bindDocumentEvents() {
 	/* Bind click and tap event for mobile collapse navigation */
 	var menuIcon = $('.menuIcon');
 	menuIcon.on('click', function(e) { toggleNavigation(); e.stopPropagation(); });
-	menuIcon.tap(function() { toggleNavigation(); e.stopPropagation(); });
+	//menuIcon.tap(function(e) { toggleNavigation(); e.stopPropagation(); });
 	// Todo: onResize: check if > 900 and make nav visible
-
-	$(document).tap(function() { hideNavigation(); });
-
 };
 
 $(document).ready(function() {
