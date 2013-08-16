@@ -36,9 +36,15 @@ en:
     about_us_title: "About le developers"
     about_us_text: "StudyMatch was created in 2011 by two Austrian students, who played that game - guessing the study of passing students - in real life (soo hard core!). In 2013 we decided to have a relaunch and optimize this app for mobile and non-german speaking dudes (so that more people on earth can waste their time with it). Anyways, we hope you have as much fun as we have :)"
     contact_title: "Want to get in touch with those handsome guys?"
-    email: "mail@studymatch.com"
+    email: "mail@studymatch.me"
 
   # FAQ
   faq:
     nav_title: "FAQ"
-    title: "You have questions"
+    title: "You have questions ..."
+    question1: "Can I use studyMatch without a fb account?"
+    answer1 : "No, but that make things easier for both of us."
+    question2: "So what data do you need from me?"
+    answer2 : "We just need and want your profile picture and if its available your study subject."
+    question3: "What else?"
+    answer3 : "We won\'t send you any spam or post on your wall (why should we?). We just want you to have fun here!"
