@@ -135,12 +135,16 @@ h3 { font-size: 1em; margin: 2em 0 0.5em 0; }
     position: relative;
 }
 
-.loginLink {
+.authMenuIcon {
     display: inline-block;
     padding-top:16px;
-    background: url('login.png') center center no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
     width:32px; height:32px;
 }
+
+.loginLink { background-image: url('login_fb.png'); }
+.profileLink { background-image: url('profile.png'); }
 
 .scoreTitle {
     display: block;
