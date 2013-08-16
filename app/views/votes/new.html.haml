@@ -3,7 +3,7 @@
         =I18n.t('vote.title')
 
     .imageWrapper
-        =image_tag "https://graph.facebook.com/1209140843/picture?type=large", { :class => "profileImage" }
+        =image_tag "https://graph.facebook.com/#{@vote.subject.external_id}/picture?width=200&height=300", { :class => "profileImage" }
 
     %ul.chooseList
         %li

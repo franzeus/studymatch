@@ -1,4 +1,6 @@
 Studymatch::Application.routes.draw do
+  get "oauths/oauth"
+  get "oauths/callback"
   resources :votes
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -10,6 +12,9 @@ Studymatch::Application.routes.draw do
   get 'about' => 'pages#about'
   get 'faq' => 'pages#faq'
 
+  match "oauth/callback" => "oauths#callback", via: [:get, :post]
+  match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider, via: [:get, :post]
+  get 'logout' => 'oauths#destroy', :as => :logout
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
