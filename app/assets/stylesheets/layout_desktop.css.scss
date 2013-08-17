@@ -7,6 +7,9 @@
 
         width:900px;
         margin:auto;
+        height:65px;
+
+        li { height: 65px; }
 
         .logo { width:40%; }
         .score { width:20%; }
@@ -16,6 +19,7 @@
     h1 { margin:0; }
     .subtitle { color:#F6F6F6; font-size: 0.8em; display: block;}
 
+    .authMenuIcon { padding-top:30px; }
     .menuIcon { visibility: hidden; display: none; }
 
     .container { margin:auto; width:900px; }
@@ -23,16 +27,26 @@
     /* Nav */
     .nav {
         border:0;
-        position:static; display:block; padding-top:18px; margin:auto; width:300px;
+        position:static; display:block; padding-top:21px; margin:auto; 
         
         li {
             background:none; border:none;
             float:left;
-            margin-right:1em;
-            font-weight: bold; 
+            text-align: center;
+            font-weight: normal; 
             color:#FFF;
             padding:0;
+            height:auto;
+            width:90px;
+
+            a {
+                padding:0px;
+            }
+
         }
+        li:last-child { margin:0; }
+        li:hover { background: none; border-bottom:1px solid #F6F6F6; }
+
     }
 
 }

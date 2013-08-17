@@ -30,7 +30,7 @@ en:
 
   # ABOUT
   about:
-    nav_title: "About us"
+    nav_title: "About"
     title: "About studyMatch"
     game: "Ever thought something like \"<i>Maaan, that guy there is certainly a computer-science student</i>\"? Yeah we neither. Anyways on StudyMatch you can guess a persons subject based on his or her picture and find out if you have that secret talent you always wanted \"guess correctly\".<p>Not sure if you took the right subject? No problem, others can judge you too.</p> And now sign up and invite all your friends!"
     about_us_title: "About le developers"
