@@ -24,13 +24,14 @@
             </div>
         </li>
         <li class="score">
-            <div class="scoreWrapper">
-            	<a href="#" class="loginLink"></a>
-        	
-        	<!--
-                <span class="scoreTitle">score</span>
-                <span class="scoreValue">301</span>
-                -->
+            <div class="scoreWrapper" data-no-turbolink>
+                
+                <% if current_user %>
+                    <%= link_to "Logout", :logout, {:class => 'profileLink' } %>
+                <% else %>
+                    <%= link_to '', auth_at_provider_path(:provider => :facebook), {:class => 'loginLink' } %>
+                <% end %>
+            
             </div>
         </li>
         <li class="menu">
@@ -58,14 +59,7 @@
     <!--
         CONTENT
     -->
-    <div class="container">
-        <div data-no-turbolink>
-            <% if current_user %>
-                <%= link_to "Logout", :logout %>
-            <% else %>
-            <%= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook) %>
-            <% end %>
-        </div>   
+    <div class="container">        
     	<div class="content">
 			<%= yield %>
 		</div>
