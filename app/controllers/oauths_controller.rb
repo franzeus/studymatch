@@ -13,7 +13,6 @@ class OauthsController < ApplicationController
   def callback
     provider = params[:provider]
     if @user = login_from(provider)
-      debugger
       redirect_to root_path, :notice => "Logged in from #{provider.titleize}!"
     else
       begin
