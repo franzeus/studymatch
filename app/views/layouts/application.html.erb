@@ -29,9 +29,9 @@
             <div class="scoreWrapper" data-no-turbolink>
                 
                 <% if current_user %>
-                    <%= link_to "Logout", :logout, {:class => 'profileLink' } %>
+                    <%= link_to '', :logout, {:class => 'authMenuIcon profileLink' } %>
                 <% else %>
-                    <%= link_to '', auth_at_provider_path(:provider => :facebook), {:class => 'loginLink' } %>
+                    <%= link_to '', auth_at_provider_path(:provider => :facebook), {:class => 'authMenuIcon loginLink' } %>
                 <% end %>
 
             </div>
@@ -53,6 +53,11 @@
                 	<li><%= link_to I18n.t("vote.nav_title"), new_vote_path %></li>
                     <li><%= link_to I18n.t("about.nav_title"), about_path %></li>
                     <li><%= link_to I18n.t("faq.nav_title"), faq_path %></li>
+                    <% if current_user %>
+                        <li>
+                        <%= link_to 'Logout', :logout %>
+                        </li>
+                    <% end %>
                 </ul>
             </div>
         </li>
