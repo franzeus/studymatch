@@ -10,3 +10,18 @@ var slideImageIn = function() {
         $('.imageWrapper .loading').remove();
     };
 }
+
+/**
+* Binds vote-page specific events
+*/
+var bindVotePageEvents = function() {
+ 
+    /* Vote - submit on li click */
+    var chooseList = $('.chooseList');
+    chooseList.on('click', 'li', function() {
+        $(this).find('input[type="radio"]').prop('checked', true);
+        var form = $(this).closest('form');
+        form.submit();
+    });
+
+}

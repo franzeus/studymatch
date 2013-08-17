@@ -51,14 +51,7 @@ function bindDocumentEvents() {
 	var menuIcon = $('.menuIcon');
 	menuIcon.on('click', function(e) { toggleNavigation(); e.stopPropagation(); });	
 
-	/* Vote - submit on li click */
-	var chooseList = $('.chooseList');
-	chooseList.on('click', 'li', function() {
-		$(this).find('input[type="radio"]').prop('checked', true);
-		var form = $(this).closest('form');
-		form.submit();
-	});
-
+	bindVotePageEvents();
 };
 
 $(document).ready(function() {
