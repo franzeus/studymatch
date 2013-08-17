@@ -7,5 +7,6 @@ var slideImageIn = function() {
 
     profileImage[0].onload = function() {
         profileImage.addClass('slideInRight');
+        $('.imageWrapper .loading').remove();
     };
 }

@@ -3,6 +3,8 @@
         =I18n.t('vote.title')
 
     .imageWrapper
+        .loading
+            = image_tag "loader.gif"
         =image_tag "https://graph.facebook.com/#{@vote.subject.external_id}/picture?width=200&height=300", { :class => "profileImage" }
 
     = form_for @vote do |f|
