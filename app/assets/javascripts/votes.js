@@ -3,16 +3,23 @@
 */
 var slideImageIn = function() {
 
-    var profileImage = Zepto('.profileImage');
+    var profileImage = Zepto('.profileImage'),
+        timeout = null;
 
+    /* 
+        Because image.onload did not work very well,
+        we call a function which checks the image complete state
+    */
     var isDoneLoading = function isDoneLoading() {
 
         if (!profileImage[0].complete) {
-            setTimeout(isDoneLoading, 50);
+
+            timeout = setTimeout(isDoneLoading, 50);
 
         } else {
-           profileImage.show().addClass('slideInRight');
-           Zepto('.imageWrapper .loading').remove();
+            clearTimeout(timeout);
+            profileImage.show().addClass('slideInRight');
+            Zepto('.imageWrapper .loading').remove();
         }
     }();
 };
