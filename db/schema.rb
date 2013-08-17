@@ -11,19 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130815102344) do
+ActiveRecord::Schema.define(version: 20130816093926) do
+
+  create_table "authentications", force: true do |t|
+    t.integer  "student_id", null: false
+    t.string   "provider",   null: false
+    t.string   "uid",        null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "students", force: true do |t|
+    t.string   "email",            null: false
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "external_id"
+    t.integer  "study_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "studies", force: true do |t|
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "votes", force: true do |t|
+    t.integer  "creator_id"
+    t.integer  "subject_id"
+    t.integer  "study_id"
+    t.boolean  "correct"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

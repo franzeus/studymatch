@@ -26,8 +26,14 @@
             </div>
         </li>
         <li class="score">
-            <div class="scoreWrapper">
-            	<a href="#" class="authMenuIcon loginLink"></a>        	   
+            <div class="scoreWrapper" data-no-turbolink>
+                
+                <% if current_user %>
+                    <%= link_to "Logout", :logout, {:class => 'profileLink' } %>
+                <% else %>
+                    <%= link_to '', auth_at_provider_path(:provider => :facebook), {:class => 'loginLink' } %>
+                <% end %>
+
             </div>
         </li>
         <li class="menu">
@@ -55,7 +61,7 @@
     <!--
         CONTENT
     -->
-    <div class="container">
+    <div class="container">        
     	<div class="content">
 			<%= yield %>
 		</div>
