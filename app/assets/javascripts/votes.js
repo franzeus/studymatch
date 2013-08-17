@@ -3,11 +3,11 @@
 */
 var slideImageIn = function() {
 
-    var profileImage = $('.profileImage');
+    var profileImage = Zepto('.profileImage');
 
     profileImage[0].onload = function() {
         profileImage.addClass('slideInRight');
-        $('.imageWrapper .loading').remove();
+        Zepto('.imageWrapper .loading').remove();
     };
 }
 
@@ -17,10 +17,10 @@ var slideImageIn = function() {
 var bindVotePageEvents = function() {
  
     /* Vote - submit on li click */
-    var chooseList = $('.chooseList');
+    var chooseList = Zepto('.chooseList');
     chooseList.on('click', 'li', function() {
-        $(this).find('input[type="radio"]').prop('checked', true);
-        var form = $(this).closest('form');
+        Zepto(this).find('input[type="radio"]').prop('checked', true);
+        var form = Zepto(this).closest('form');
         form.submit();
     });
 

@@ -1,7 +1,7 @@
 function toggleModal(show) {
 
-	var modalObject = $('.modal');
-	var body = $('body');
+	var modalObject = Zepto('.modal');
+	var body = Zepto('body');
 
 	if (show) {
 
@@ -12,7 +12,7 @@ function toggleModal(show) {
 
 		// Create and append modal to body
 		} else {
-			var modal = $('<div class="modal"></div>');
+			var modal = Zepto('<div class="modal"></div>');
 			body.append(modal);
 		}
 
@@ -32,7 +32,7 @@ function toggleModal(show) {
 
 function toggleNavigation() {
 
-	var navObj = $('.nav'),
+	var navObj = Zepto('.nav'),
 		className = 'slideTop';
 
 	navObj.toggleClass(className);
@@ -42,27 +42,27 @@ function toggleNavigation() {
 
 function hideNavigation() {
 	toggleModal(false);
-	$('.nav').removeClass('slideTop');
+	Zepto('.nav').removeClass('slideTop');
 };
 
 function bindDocumentEvents() {
 
 	/* Bind click and tap event for mobile collapse navigation */
-	var menuIcon = $('.menuIcon');
+	var menuIcon = Zepto('.menuIcon');
 	menuIcon.on('click', function(e) { toggleNavigation(); e.stopPropagation(); });	
 
 	bindVotePageEvents();
 };
 
-$(document).ready(function() {
+Zepto(document).ready(function() {
 	bindDocumentEvents();
 });
 
-$(document).on('page:load', function() {
+Zepto(document).on('page:load', function() {
 	hideNavigation();
 	bindDocumentEvents();	
 });
 
-$(document).on('page:restore', function() {
+Zepto(document).on('page:restore', function() {
 	hideNavigation();
 });
