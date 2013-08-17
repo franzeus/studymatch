@@ -9,19 +9,18 @@
  	.imageWrapper {  text-align:center; background:#F6F6F6; padding:1em; margin-bottom:1em; border-radius: 4px; }
 	img { margin:auto; max-width:100%;  }
 
-	.chooseList li { margin-bottom: 3px; }
+	.chooseList li { margin-bottom: 8px; position: relative; overflow: hidden; }
 
 	.chooseList button {
-		padding:8px;
-	    background:#F6F6F6;
+		background:#ecf0f1;
+		padding:12px;
 	    border:0;
-	    width:100%;
 	    text-align: left;
-	    border-left:6px solid #FFBF00;
+	    width:100%;
+	    border-left:35px solid #7f8c8d;
+	    color:#7f8c8d;
 	}
 
-	.chooseList button:hover {
-    	border-left:6px solid #7c9c27;
-    	color:#7c9c27;
-    }
+	.chooseList button:hover { border-left:35px solid #e67e22; }
+
 }
