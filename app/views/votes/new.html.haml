@@ -3,9 +3,16 @@
         =I18n.t('vote.title')
 
     .imageWrapper
+        .loading
+            = image_tag "loader.gif"
         =image_tag "https://graph.facebook.com/#{@vote.subject.external_id}/picture?width=200&height=300", { :class => "profileImage" }
 
-    %ul.chooseList
-        = form_for @vote do |f|
-            %li
-                = f.collection_radio_buttons :answers, @vote.answers, :id, :title
+    = form_for @vote do |f|
+        %ul.chooseList
+            = f.collection_radio_buttons :answers, @vote.answers, :id, :title do |item|
+                %li
+                    = item.radio_button
+                    = item.label
+
+%script{:type => "text/javascript"}
+    slideImageIn();

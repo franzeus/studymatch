@@ -1,6 +1,7 @@
 function toggleModal(show) {
 
 	var modalObject = $('.modal');
+	var body = $('body');
 
 	if (show) {
 
@@ -12,14 +13,14 @@ function toggleModal(show) {
 		// Create and append modal to body
 		} else {
 			var modal = $('<div class="modal"></div>');
-			$('.container').append(modal);
+			body.append(modal);
 		}
 
-		var windowObj = $(window)[0];
+		var windowObj = body[0];
 
 		modal.css({
 			width: windowObj.innerWidth,
-			height: windowObj.outerHeight
+			height: windowObj.innerHeight
 		});
 
 	// Remove modal
@@ -28,7 +29,6 @@ function toggleModal(show) {
 	}
 
 };
-
 
 function toggleNavigation() {
 
@@ -49,9 +49,14 @@ function bindDocumentEvents() {
 
 	/* Bind click and tap event for mobile collapse navigation */
 	var menuIcon = $('.menuIcon');
-	menuIcon.on('click', function(e) { toggleNavigation(); e.stopPropagation(); });
-	//menuIcon.tap(function(e) { toggleNavigation(); e.stopPropagation(); });
-	// Todo: onResize: check if > 900 and make nav visible
+	menuIcon.on('click', function(e) { toggleNavigation(); e.stopPropagation(); });	
+
+	/* Vote - submit on li click */
+	var chooseList = $('.chooseList');
+	chooseList.on('click', 'li', function() {
+		$(this).closest('form').submit();
+	});
+
 };
 
 $(document).ready(function() {
@@ -60,9 +65,13 @@ $(document).ready(function() {
 
 $(document).on('page:load', function() {
 	hideNavigation();
-	bindDocumentEvents();
+	bindDocumentEvents();	
 });
-
+/*
+$(document).on('page:fetch', function() {
+	$('.content').removeClass('fadeIn');
+});
+*/
 $(document).on('page:restore', function() {
 	hideNavigation();
 });

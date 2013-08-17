@@ -6,21 +6,37 @@
 
     width:100%;
 
- 	.imageWrapper {  text-align:center; background:#F6F6F6; padding:1em; margin-bottom:1em; border-radius: 4px; }
+ 	.imageWrapper {  text-align:center; background:#F6F6F6; padding:1em; margin-bottom:1em; border-radius: 4px; overflow: hidden; }
 	img { margin:auto; max-width:100%;  }
 
-	.chooseList li { margin-bottom: 8px; position: relative; overflow: hidden; }
-
-	.chooseList button {
+	.chooseList li { 
+		margin-bottom: 8px;
+		overflow: hidden;
 		background:#ecf0f1;
 		padding:12px;
 	    border:0;
 	    text-align: left;
-	    width:100%;
 	    border-left:35px solid #7f8c8d;
 	    color:#7f8c8d;
+	    cursor: pointer;
 	}
 
-	.chooseList button:hover { border-left:35px solid #e67e22; }
-
+	.chooseList li:hover { border-left:35px solid #e67e22; }
+	.chooseList li label { cursor: inherit; }
+	.chooseList input { display: none; }
 }
+
+.slideInRight {
+    -webkit-animation-duration: 0.6s;
+    -webkit-animation-name: slideInRight;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-transition-timing-function: linear;
+
+    animation-duration: 0.6s;
+    animation-name: slideInRight;
+    animation-fill-mode: forwards;
+    transition-timing-function: linear;
+}
+
+@-webkit-keyframes slideInRight { from { margin-left: 100%; }  to { margin-left:0%; } }
+@keyframes slideInRight { from { opacity: 0; }  to { opacity: 1; } }
