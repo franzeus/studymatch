@@ -16,7 +16,6 @@ class OauthsController < ApplicationController
       redirect_to root_path, :notice => "Logged in from #{provider.titleize}!"
     else
       begin
-        debugger
         @user = create_from(provider)
         reset_session # protect from session fixation attack
         auto_login(@user)
