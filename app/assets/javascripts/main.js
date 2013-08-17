@@ -54,7 +54,9 @@ function bindDocumentEvents() {
 	/* Vote - submit on li click */
 	var chooseList = $('.chooseList');
 	chooseList.on('click', 'li', function() {
-		$(this).closest('form').submit();
+		$(this).find('input[type="radio"]').prop('checked', true);
+		var form = $(this).closest('form');
+		form.submit();
 	});
 
 };
@@ -67,11 +69,7 @@ $(document).on('page:load', function() {
 	hideNavigation();
 	bindDocumentEvents();	
 });
-/*
-$(document).on('page:fetch', function() {
-	$('.content').removeClass('fadeIn');
-});
-*/
+
 $(document).on('page:restore', function() {
 	hideNavigation();
 });
