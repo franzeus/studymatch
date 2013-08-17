@@ -5,11 +5,17 @@ var slideImageIn = function() {
 
     var profileImage = Zepto('.profileImage');
 
-    profileImage[0].onload = function() {
-        profileImage.addClass('slideInRight');
-        Zepto('.imageWrapper .loading').remove();
-    };
-}
+    var isDoneLoading = function isDoneLoading() {
+
+        if (!profileImage[0].complete) {
+            setTimeout(isDoneLoading, 50);
+
+        } else {
+           profileImage.show().addClass('slideInRight');
+           Zepto('.imageWrapper .loading').remove();
+        }
+    }();
+};
 
 /**
 * Binds vote-page specific events
