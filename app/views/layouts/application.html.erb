@@ -54,7 +54,7 @@
                     <li><%= link_to I18n.t("about.nav_title"), about_path %></li>
                     <li><%= link_to I18n.t("faq.nav_title"), faq_path %></li>
                     <% if current_user %>
-                        <li>
+                        <li class="logoutLi">
                         <%= link_to 'Logout', :logout %>
                         </li>
                     <% end %>
