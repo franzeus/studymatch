@@ -13,6 +13,7 @@
                 %li
                     = item.radio_button
                     = item.label
+        = f.hidden_field :subject_id, value: @vote.subject_id
 
 %script{:type => "text/javascript"}
     slideImageIn();

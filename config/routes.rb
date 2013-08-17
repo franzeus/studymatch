@@ -1,19 +1,16 @@
 Studymatch::Application.routes.draw do
-  get "oauths/oauth"
-  get "oauths/callback"
-  resources :votes
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
+  
   root 'votes#new'
+
+  resources :votes, only: [:create, :new]
 
   get 'about' => 'pages#about'
   get 'faq' => 'pages#faq'
 
   match "oauth/callback" => "oauths#callback", via: [:get, :post]
   match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider, via: [:get, :post]
+  get "oauths/oauth"
+  get "oauths/callback"
   get 'logout' => 'oauths#destroy', :as => :logout
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
