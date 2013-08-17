@@ -50,9 +50,14 @@ function bindDocumentEvents() {
 
 	/* Bind click and tap event for mobile collapse navigation */
 	var menuIcon = $('.menuIcon');
-	menuIcon.on('click', function(e) { toggleNavigation(); e.stopPropagation(); });
-	//menuIcon.tap(function(e) { toggleNavigation(); e.stopPropagation(); });
-	// Todo: onResize: check if > 900 and make nav visible
+	menuIcon.on('click', function(e) { toggleNavigation(); e.stopPropagation(); });	
+
+	/* Vote - submit on li click */
+	var chooseList = $('.chooseList');
+	chooseList.on('click', 'li', function() {
+		$(this).closest('form').submit();
+	});
+
 };
 
 $(document).ready(function() {
