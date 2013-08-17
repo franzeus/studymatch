@@ -45,7 +45,8 @@
 
         }
         li:last-child { margin:0; }
-        li:hover { background: none; border-bottom:1px solid #F6F6F6; }
+        li:hover { background: none; color:#333; }
+        li:hover a { background: none; color:#333; }
 
     }
 
