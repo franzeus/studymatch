@@ -30,7 +30,6 @@ function toggleModal(show) {
 
 };
 
-
 function toggleNavigation() {
 
 	var navObj = $('.nav'),
@@ -66,9 +65,13 @@ $(document).ready(function() {
 
 $(document).on('page:load', function() {
 	hideNavigation();
-	bindDocumentEvents();
+	bindDocumentEvents();	
 });
-
+/*
+$(document).on('page:fetch', function() {
+	$('.content').removeClass('fadeIn');
+});
+*/
 $(document).on('page:restore', function() {
 	hideNavigation();
 });
