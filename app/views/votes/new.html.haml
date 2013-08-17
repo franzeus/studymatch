@@ -6,12 +6,6 @@
         =image_tag "https://graph.facebook.com/#{@vote.subject.external_id}/picture?width=200&height=300", { :class => "profileImage" }
 
     %ul.chooseList
-        %li
-            %button{ :value => "1" }
-                Multimedia-Technology
-        %li
-            %button{ :value => "2" }
-                Chemie
-        %li
-            %button{ :value => "3" }
-                Pharmazie
+        = form_for @vote do |f|
+            %li
+                = f.collection_radio_buttons :answers, @vote.answers, :id, :title
