@@ -3,16 +3,20 @@ class Vote < ActiveRecord::Base
   belongs_to :creator, class_name: Student
   belongs_to :subject, class_name: Student
   belongs_to :study
+  belongs_to :answer, class_name: Study
 
-  validates :creator, presence: true 
   validates :subject, presence: true
 
   after_initialize :select_subject
   after_initialize :set_study
-  before_create :is_correct?
+  before_create :set_correct
 
-  def is_correct?
-    self.correct = self.subject.study == self.study
+  def set_correct
+    self.correct = self.study_id == self.answer_id
+  end
+
+  def correct?
+    self.correct
   end
 
   def answers
@@ -21,14 +25,10 @@ class Vote < ActiveRecord::Base
   end
 
   def select_subject
-    self.subject = Student.votable.where('id != ?', (creator_id || false)).order("RANDOM()").first
+    self.subject_id ||= Student.votable.where('id != ?', (creator_id || false)).order("RANDOM()").first.id
   end
 
   def set_study
     self.study = subject.study
-  end
-
-  def answer(study_id)
-    true
   end
 end
