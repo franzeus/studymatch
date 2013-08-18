@@ -1,22 +1,28 @@
-function toggleModal(show) {
+/**
+* Appends modal-div to page's body
+* @param {boolean} showIt Whether to show or to hide the modal
+*/
+function toggleModal(showIt) {
 
-	var modalObject = Zepto('.modal');
-	var body = Zepto('body');
+	var modal = null,
+		modalClassName = 'modal',
+		modalObject = Zepto('.' + modalClassName);
 
-	if (show) {
+	if (showIt) {
+
+		var body = Zepto('body'),
+			windowObj = body[0];
 
 		// If already on the page, then only update size
 		if (modalObject.length) {
 
-			var modal = modalObject;
+			modal = modalObject;
 
 		// Create and append modal to body
 		} else {
-			var modal = Zepto('<div class="modal"></div>');
+			modal = Zepto('<div class="' + modalClassName + '"></div>');
 			body.append(modal);
 		}
-
-		var windowObj = body[0];
 
 		modal.css({
 			width: windowObj.innerWidth,
@@ -30,39 +36,34 @@ function toggleModal(show) {
 
 };
 
-function toggleNavigation() {
-
-	var navObj = Zepto('.nav'),
-		className = 'slideTop';
-
-	navObj.toggleClass(className);
-
-	toggleModal(navObj.hasClass(className));
-};
-
-function hideNavigation() {
-	toggleModal(false);
-	Zepto('.nav').removeClass('slideTop');
-};
-
+/**
+* Will be called when document is ready.
+* If you want to bind an event handler or init an object,
+* do it here
+*/
 function bindDocumentEvents() {
-
-	/* Bind click and tap event for mobile collapse navigation */
-	var menuIcon = Zepto('.menuIcon');
-	menuIcon.on('click', function(e) { toggleNavigation(); e.stopPropagation(); });	
-
+	NavigationMenu.init();
 	bindVotePageEvents();
 };
 
+/*
+	----------------------------------------
+	DOCUMENT READY
+	----------------------------------------
+*/
 Zepto(document).ready(function() {
 	bindDocumentEvents();
 });
 
+/*
+	Because we use turbolink, we have to call certain functions,
+	which should be triggered on-document-ready, again
+*/
 Zepto(document).on('page:load', function() {
-	hideNavigation();
+	NavigationMenu.hideNavigation();
 	bindDocumentEvents();	
 });
 
 Zepto(document).on('page:restore', function() {
-	hideNavigation();
+	NavigationMenu.hideNavigation();
 });

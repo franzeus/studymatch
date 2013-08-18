@@ -1,5 +1,5 @@
 /**
-* Waits the profile image to be loaded and then adds slideIn class to the element
+* Waits for the profile image to be loaded and then makes it slide
 */
 var slideImageIn = function() {
 
@@ -14,6 +14,7 @@ var slideImageIn = function() {
 
         if (!profileImage[0].complete) {
 
+            /* Wait a bit, otherwise could get a stackoverflow */
             timeout = setTimeout(isDoneLoading, 50);
 
         } else {
@@ -37,4 +38,4 @@ var bindVotePageEvents = function() {
         form.submit();
     });
 
-}
+};
