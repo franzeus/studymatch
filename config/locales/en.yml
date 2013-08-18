@@ -27,6 +27,8 @@ en:
   vote:
     nav_title: "Vote"
     title: "Make your guess ..."
+    correct: "You're right! :)"
+    incorrect: "Nope, thats wrong :/"
 
   # ABOUT
   about:
@@ -34,7 +36,7 @@ en:
     title: "About studyMatch"
     game: "Ever thought something like \"<i>Maaan, that guy there is certainly a computer-science student</i>\"? Yeah we neither. Anyways on StudyMatch you can guess a persons subject based on his or her picture and find out if you have that secret talent you always wanted \"guess correctly\".<p>Not sure if you took the right subject? No problem, others can judge you too.</p> And now sign up and invite all your friends!"
     about_us_title: "About le developers"
-    about_us_text: "StudyMatch was created in 2011 by two Austrian students, who played that game - guessing the study of passing students - in real life (soo hard core!). In 2013 we decided to have a relaunch and optimize this app for mobile and non-german speaking dudes (so that more people on earth can waste their time with it). Anyways, we hope you have as much fun as we have :)"
+    about_us_text: "StudyMatch was created in 2011 by two Austrian students, who first guessed the subject of passing students in real life. In 2013 we decided to optimize this app for mobile and non-german speaking dudes (so that more people on earth can waste their time with it). Anyways, we hope you have as much fun as we have :)"
     contact_title: "Want to get in touch with those handsome guys?"
     email: "mail@studymatch.me"
 

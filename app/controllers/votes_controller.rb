@@ -11,13 +11,13 @@ class VotesController < ApplicationController
     voted = current_user ? current_user.votes.create(normalized_params[:vote]) : Vote.create(normalized_params[:vote])
     
     if voted.correct?
-      flash[:notice] = "You're right!"
+      flash[:notice] = I18n.t('vote.correct')
     else
-      flash[:alert] = "Wrong!"
+      flash[:alert] = I18n.t('vote.incorrect')
     end
 
     @vote = new_vote
-    render :new
+    redirect_to new_vote_path
   end
 
   private
