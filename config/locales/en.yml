@@ -27,8 +27,20 @@ en:
   vote:
     nav_title: "Vote"
     title: "Make your guess ..."
-    correct: "You're right! :)"
-    incorrect: "Nope, thats wrong :/"
+    correct: 
+      1: "You're right! :)"
+      2: "That's correct!"
+      3: "Hell yeah!"
+      4: "Right! You are awesome!"
+      5: "Well done! Can you also guess the next one?"
+      6: "Good work!"
+    incorrect:
+      1: "Nope, thats wrong :/"
+      2: "Naaaaa"
+      3: "Come on - you can do better!"
+      4: "No - not what you thought"
+      5: "Maybe you have more luck with the next one"
+      6: "Really? That's not correct!"
 
   # ABOUT
   about:

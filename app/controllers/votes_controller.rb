@@ -10,10 +10,12 @@ class VotesController < ApplicationController
   def create
     voted = current_user ? current_user.votes.create(normalized_params[:vote]) : Vote.create(normalized_params[:vote])
     
+    random_vote_message_key = get_random_vote_message_key()
+
     if voted.correct?
-      flash[:notice] = I18n.t('vote.correct')
+      flash[:notice] = I18n.t("vote.correct")[random_vote_message_key]
     else
-      flash[:alert] = I18n.t('vote.incorrect')
+      flash[:alert] = I18n.t("vote.incorrect")[random_vote_message_key]
     end
 
     @vote = new_vote
@@ -28,6 +30,10 @@ class VotesController < ApplicationController
   def normalized_params
     params[:vote][:answer_id] ||= params[:vote].delete(:answers)
     params.permit!
+  end
+
+  def get_random_vote_message_key
+    rand(1..6)
   end
 
 end
