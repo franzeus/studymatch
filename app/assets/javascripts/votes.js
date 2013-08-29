@@ -3,8 +3,10 @@
 */
 var slideImageIn = function() {
 
-    var profileImage = Zepto('.profileImage'),
+    var profileImage = Zepto('.profileImage').find('.userImage'),
         timeout = null;
+
+    profileImage.hide();
 
     /* 
         Because image.onload did not work very well,
@@ -19,8 +21,8 @@ var slideImageIn = function() {
 
         } else {
             clearTimeout(timeout);
-            profileImage.show().addClass('slideInRight');
             Zepto('.imageWrapper .loading').remove();
+            profileImage.show().addClass('slideInRight');
         }
     }();
 };
