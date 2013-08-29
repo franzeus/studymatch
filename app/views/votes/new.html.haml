@@ -1,19 +1,22 @@
 .guessBox
-    %h2
-        =I18n.t('vote.title')
 
     .imageWrapper
+        .arrow_box
         .loading
-            = image_tag "loader.gif"
-        =image_tag "https://graph.facebook.com/#{@vote.subject.external_id}/picture?width=200&height=300", { :class => "profileImage" }
+            =# image_tag "loader.gif"
+        .profileImage{ :style => "background-image:url(https://graph.facebook.com/#{@vote.subject.external_id}/picture?width=250&height=200);" }
 
     = form_for @vote do |f|
+
         %ul.chooseList
             = f.collection_radio_buttons :answers, @vote.answers, :id, :title do |item|
                 %li
                     = item.radio_button
-                    = item.label
+                    .label
+                        %i{ :class => "icon-circle-arrow-right" }
+                        = item.label
+
         = f.hidden_field :subject_id, value: @vote.subject_id
 
 %script{:type => "text/javascript"}
-    slideImageIn();
+    //slideImageIn();

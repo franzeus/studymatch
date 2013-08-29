@@ -6,23 +6,44 @@
 
     width:100%;
 
- 	.imageWrapper {  text-align:center; background:#F6F6F6; padding:1em; margin-bottom:1em; border-radius: 4px; overflow: hidden; }
-	img { margin:auto; max-width:100%;  }
-	.profileImage { display: none; }
+ 	.imageWrapper {  
+ 		text-align:center;
+ 		margin:auto;
+ 		padding:2em 0 0 0;
+ 		width:100%; 
+ 		height:230px;
+ 		background:url(shattered.png) #EEE center center;
+ 	}
 
-	.chooseList li { 
-		margin-bottom: 8px;
-		overflow: hidden;
-		background:#ecf0f1;
-		padding:12px;
-	    border:0;
-	    text-align: left;
-	    border-left:35px solid #7f8c8d;
-	    color:#7f8c8d;
-	    cursor: pointer;
+	img { margin:auto; max-width:100%; max-height: 100%; }
+
+	.profileImage {
+		height:200px; 
+		width:250px;
+		border-radius: 4px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		margin:auto;
+		border:2px solid #FFF;
 	}
 
-	.chooseList li:hover { border-left:35px solid #e67e22; }
+	.chooseList { width:285px; margin:auto; margin-top:1em; }
+	.chooseList li {
+		overflow: hidden;
+		padding:12px;
+	    color:#555;
+	    background:#FFF;
+	    border: 1px solid #DDD;
+	    cursor: pointer;
+	    font-size: 10pt;
+	    margin-bottom:4px;
+	    font-weight: bold;
+	    border-radius: 4px;
+	}
+
+	.chooseList li i { color:#CCC; margin-right:8px; }
+	.chooseList li:hover, .chooseList li:hover i { color:#f39c12; }
 	.chooseList li label { cursor: inherit; }
 	.chooseList input { display: none; }
 }

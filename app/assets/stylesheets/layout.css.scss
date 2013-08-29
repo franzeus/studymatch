@@ -29,12 +29,14 @@ html { height: 100% }
 body {
     height: 100%;
     font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.4;
     color:#333;
+    background:#EEE;
 }
 
 a {
-    color: #00e;
+    color: #00e; text-decoration: none;
 }
 
 a:visited {
@@ -80,86 +82,56 @@ ul {
 }
 
 .header {
-    background:#7c9c27;
-    border-bottom:5px solid #CCC;
-    height:50px;
+    background:#87C468;
+    height:40px;
     z-index: 200;
     position: relative;
-}
-
-.header li {
-    float:left;
-    background:#7c9c27; margin-left:0px; height:50px;
-}
-
-.header .logo {
-    width:60%;
-    float:left;
-}    
-
-.header .menu { 
-    width:20%;
-}
-
-.header .score {
-    width:20%;
-    background:#CCC;
+    text-align:center;
+    box-shadow: 1px 2px 4px #AAA;
 }
 
 h1 {
-    margin:4px 0; padding:0;
-    color:#F6F6F6;
-    font-size:1.4em;
+    margin:0px 0; padding:8px 0;
+    color:#FFF;
+    font-size:1.2em;
+    font-family: 'Merienda One', cursive;
     font-weight: normal;
 }
 
-h1 .secondColor { color:#ABCC54; }
+h1 .secondColor { color:#333; }
 
-h2 { font-size: 1.2em; }
+h2 { font-size: 1.2em; color:#333; margin-bottom:0em; }
 h3 { font-size: 1em; margin: 2em 0 0.2em 0; }
 
 .subtitle { display: none; }
 
-/* Header LIs content */
-.logoWrapper { padding:8px; }
-
-.logoWrapper a { text-decoration: none; }
-
-.menuWrapper {
-    height:100%; border-left:1px solid #333;
-    padding:0px 8px 0px 8px;
-    text-align: center;
+/*
+    Menu links
+*/
+.navIcon {
+    border: 0; 
+    border-radius: 8px; 
+    padding:4px 8px; 
+    margin-top:4px;
+    position:absolute;    
 }
+.navIcon { text-decoration: none; }
 
-.menuIcon { border:0; background:none; width:32px; height:32px; }
-
-.scoreWrapper { 
-    text-align: center; height:100%; border-left:1px solid #333;
-    position: relative;
+.menuIcon {
+    background:#76AB5B;
+    color:#F6F6F6;
+    right:12px;
+    top:2px;
 }
+.menuIcon:visited { color:#F6F6F6; }
 
-.authMenuIcon {
-    display: inline-block;
-    padding-top:16px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width:32px; height:32px;
+.userIcon {
+    border: 1px solid #76AB5B; 
+    background:none;
+    color:#5E8F45;
+    left:12px; top:2px;
 }
-
-.loginLink { background-image: url('login_fb.png'); }
-.profileLink { background-image: url('profile.png'); }
-
-.scoreTitle {
-    display: block;
-    padding-top:3px;
-    font-size: 0.8em; color:#FFF;
-}
-.scoreValue {
-    display: block;
-    color:#FFBF00;
-    font-size: 1.2em;
-    font-weight: bold;
-}
+.userIcon:visited { color:#5E8F45; }
 
 /* Nav */
 .nav {
@@ -170,7 +142,7 @@ h3 { font-size: 1em; margin: 2em 0 0.2em 0; }
     left:50%;
     margin-left:-40%;
     margin-top:-120%;
-    border:1px solid #111;
+    border:1px solid #87C468;
 }
 
 .nav li {
@@ -179,16 +151,16 @@ h3 { font-size: 1em; margin: 2em 0 0.2em 0; }
     text-align: left;
     height:auto;
     padding:0px;
-    background:#333;
-    border-bottom:1px solid #222;
-    border-left:5px solid #111;
-    color:#F6F6F6;
+    background:#F6F6F6;
+    border-bottom:1px solid #CCC;
+    border-left:5px solid #87C468;
+    color:#333;
 }
 
 .nav li a {
     text-decoration: none;
     padding:25px;
-    color:#F6F6F6;
+    color:#666;
     display: block;
 }
 
@@ -211,7 +183,7 @@ h3 { font-size: 1em; margin: 2em 0 0.2em 0; }
 @keyframes slideTop { from { margin-top: -200%; }  to { margin-top: -5%; opacity: 1; } }
 
 .nav li:hover {
-    background:#666;
+    background:#E5E5E5;
 }
 .nav li.logoutLi { border-left: 5px solid #c0392b; }
 
@@ -226,27 +198,7 @@ h3 { font-size: 1em; margin: 2em 0 0.2em 0; }
     position: relative;
 }
 
-.content { padding: 0em 1em; }
-
-/* The menu icon as divs */
-.menuIconWrapper {
-    margin-top:10px;
-    height:32px; width:32px;
-    overflow: hidden;
-    position: relative;
-}
-
-.menuIconWrapper:hover .rect {
-    vertical-align: middle;
-    background-color:#666;
-}
-
-.menuIconWrapper .rect {
-    position: absolute; 
-    width:20px; height:4px;
-    background:#F6F6F6;
-    top:0; left:0;
-}
+.content { padding: 0em 0em; }
 
 /*
     Flash messages

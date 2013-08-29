@@ -3,6 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<title>Studymatch</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	<%= csrf_meta_tags %>
@@ -17,50 +21,41 @@
         HEADER
     -->
     <ul class="header">
-        <li class="logo">
-            <div class="logoWrapper">
-                <%= link_to root_path do %>
-                    <h1>study<span class="secondColor">Match</span></h1>
-                    <span class="subtitle"><%= I18n.t('slogan') %></span>
+
+        <div data-no-turbolink>
+
+            <% if current_user %>
+                <%= link_to :logout, {:class => 'userIcon navIcon' } do %>
+                    <i class="icon-user icon-1x"></i>
                 <% end %>
-            </div>
-        </li>
-        <li class="score">
-            <div class="scoreWrapper" data-no-turbolink>
-                
-                <% if current_user %>
-                    <%= link_to '', :logout, {:class => 'authMenuIcon profileLink' } %>
-                <% else %>
-                    <%= link_to '', auth_at_provider_path(:provider => :facebook), {:class => 'authMenuIcon loginLink' } %>
+            <% else %>
+                <%= link_to auth_at_provider_path(:provider => :facebook), {:class => 'userIcon navIcon' } do %>
+                    <i class="icon-unlock icon-1x"></i>
                 <% end %>
+            <% end %>
 
-            </div>
-        </li>
-        <li class="menu">
-            
-            <div class="menuWrapper">
+        </div>
 
-                <!-- Nav button - only mobile -->
-                <button class="menuIcon" type="button">
-                    <div class="menuIconWrapper">
-                        <div class="rect" style="top:5px;"></div>
-                        <div class="rect" style="top:12px;"></div>
-                        <div class="rect" style="top:19px;"></div>
-                    </div>
-                </button>
+        <%= link_to root_path do %>
+            <h1>study<span class="secondColor">Match</span></h1>
+        <% end %>
 
-                <ul class="nav">
-                	<li><%= link_to I18n.t("vote.nav_title"), new_vote_path %></li>
-                    <li><%= link_to I18n.t("about.nav_title"), about_path %></li>
-                    <li><%= link_to I18n.t("faq.nav_title"), faq_path %></li>
-                    <% if current_user %>
-                        <li class="logoutLi">
-                        <%= link_to 'Logout', :logout %>
-                        </li>
-                    <% end %>
-                </ul>
-            </div>
-        </li>
+
+        <button class="menuIcon navIcon" type="button">
+            <i class="icon-reorder icon-1x"></i>
+        </button>
+
+        <ul class="nav">
+            <li><%= link_to I18n.t("vote.nav_title"), new_vote_path %></li>
+            <li><%= link_to I18n.t("about.nav_title"), about_path %></li>
+            <li><%= link_to I18n.t("faq.nav_title"), faq_path %></li>
+            <% if current_user %>
+                <li class="logoutLi">
+                <%= link_to 'Logout', :logout %>
+                </li>
+            <% end %>
+        </ul>
+
     </ul>
 
     <!--
