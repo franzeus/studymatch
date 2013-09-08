@@ -23,6 +23,12 @@ en:
   slogan: "Are you a stereotype?"
   login: "Login"
 
+  # Share
+  share:
+    link: Pay with a share
+    title: Why not give us something back?
+    content: Of course we appreciate if someone wants to support us with money - but as we know - students are poor creatures and if you enjoy study<span class="secondColor">Match</span> you can support us by telling your friends!
+
   # VOTE
   vote:
     nav_title: "Vote"

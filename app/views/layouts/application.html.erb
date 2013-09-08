@@ -73,11 +73,11 @@
     </div>
 
     <div class="payByShare">
-        <div class="title">Pay with a share!</div>
+        <div class="title"><%= I18n.t("share.link") %></div>
         <div class="content">
-            <h4>Why not give us something back?</h4>
+            <h4><%= I18n.t("share.title") %></h4>
             <p>
-                We appreciate if someone supports us with money - but as we know - students are poor creatures and if you like studyMatch you can support us by telling your friends and followers about it!
+                <%= raw I18n.t("share.content") %>
             </p>
             <ul class="shareButtonsList">
                 <li><a href="#"><i class="icon-twitter icon-2x"></i></a></li>
