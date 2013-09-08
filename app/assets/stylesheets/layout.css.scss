@@ -33,6 +33,7 @@ body {
     line-height: 1.4;
     color:#333;
     background:#EEE;
+    margin:0; padding:0;
 }
 
 a {
@@ -200,6 +201,76 @@ h3 { font-size: 1em; margin: 2em 0 0.2em 0; }
 }
 
 .content { padding: 0em 0em; }
+
+/* Footer */
+.payByShare {
+    margin-top:10px;
+    font-size:10pt;    
+    width:100%;
+    position:relative;
+
+    div { 
+        padding:8px;
+        background:#2E8DEF;
+        color:#FFF;
+    }
+
+    .title {
+        cursor: pointer;
+        text-align:center;
+    }
+
+    .content {
+        opacity: 0;
+        background: #5D95E3;
+        overflow: hidden;
+        position: absolute;
+        height:195px;
+        margin-top:-246px;
+        text-align: justify;
+
+        h4 { margin:0; }
+    }
+
+    .shareButtonsList {
+        width:130px;
+        margin: auto;
+
+        li {
+            float:left;
+            margin-right:10px;
+        }
+        li:last-child { margin-right: 0px; }
+
+        a {
+            text-align: center;
+            display: block;
+            width:30px;
+            padding: 15px;
+            border-radius: 7px;
+            background:#3C77C9;
+            color:#FFF;
+        }
+    }
+
+    .content.slideShareToTopAnimation {
+        display: block;        
+        z-index:1;
+        -webkit-animation-duration: 0.6s;
+        -webkit-animation-name: slideShareToTop;
+        -webkit-animation-fill-mode: forwards;
+        -webkit-transition-timing-function: linear;
+
+        animation-duration: 0.6s;
+        animation-name: slideShareToTop;
+        animation-fill-mode: forwards;
+        transition-timing-function: linear;
+    }    
+}
+
+@-webkit-keyframes slideShareToTop { from { margin-top: 30px; }  to { margin-top: -246px; opacity: 1; } }
+@keyframes slideShareToTop { from { margin-top: 30px; }  to { margin-top: -246px; opacity: 1; } }
+
 
 /*
     Flash messages

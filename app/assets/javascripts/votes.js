@@ -27,6 +27,13 @@ var slideImageIn = function() {
     }();
 };
 
+var toggleShareInfoDiv = function() {
+    var animationClass = "slideShareToTopAnimation";
+    var contentDiv = Zepto(".payByShare").find('.content');
+    console.log("herer",contentDiv)
+    contentDiv.toggleClass(animationClass);
+};
+
 /**
 * Binds vote-page specific events
 */
@@ -40,4 +47,8 @@ var bindVotePageEvents = function() {
         form.submit();
     });
 
+    Zepto('.payByShare').on('click', function() {
+        toggleShareInfoDiv();
+    });
 };
+
