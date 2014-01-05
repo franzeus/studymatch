@@ -7,7 +7,7 @@
 
         width:900px;
         margin:auto;
-        height:65px;
+        height:47px;
 
         li { height: 65px; }
 
@@ -16,7 +16,14 @@
         .menu { width:40%; float:right; }
     }
 
-    h1 { margin:0; }
+    h1 {
+        margin:0;
+        float: left;
+        margin-left: 45%;
+        vertical-align: middle;
+        display: inline-block;
+        margin-top: 3px;
+    }
     .subtitle { color:#F6F6F6; font-size: 0.8em; display: block;}
 
     .authMenuIcon { padding-top:30px; }
@@ -27,7 +34,14 @@
     /* Nav */
     .nav {
         border:0;
-        position:static; display:block; padding-top:21px; margin:auto;
+        position:static;
+        display:inline-block;
+        padding-top:0px;
+        margin:auto;
+        margin-top: 13px;
+        font-size: 13px;
+        overflow: hidden;
+        width: auto;
 
         li {
             background:none; border:none;
@@ -37,7 +51,7 @@
             color:#FFF;
             padding:0;
             height:auto;
-            width:90px;
+            width:70px;
 
             a {
                 padding:0px;
@@ -54,11 +68,22 @@
         width: 900px;
     }
 
+    .guessBox .chooseList {
+        width: 100% !important;
+
+        li {
+            float: left;
+            width: 30.4%;
+        }
+    }
+
 }
 
 @media all and (min-width:470px) {
 
-    .guessBox .imageWrapper { float:left; width:200px; margin-right:10px; }
-    .chooseList { width:230px; float:left; }
+    .guessBox .imageWrapper { width:200px; margin-right:10px; }
+    .chooseList {
+        width:230px;
+    }
 
 }
