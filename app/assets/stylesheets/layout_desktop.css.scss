@@ -3,7 +3,7 @@
 */
 @media all and (min-width:900px) {
 
-    .header { 
+    .header {
 
         width:900px;
         margin:auto;
@@ -27,13 +27,13 @@
     /* Nav */
     .nav {
         border:0;
-        position:static; display:block; padding-top:21px; margin:auto; 
-        
+        position:static; display:block; padding-top:21px; margin:auto;
+
         li {
             background:none; border:none;
             float:left;
             text-align: center;
-            font-weight: normal; 
+            font-weight: normal;
             color:#FFF;
             padding:0;
             height:auto;
@@ -48,6 +48,10 @@
         li:hover { background: none; color:#333; }
         li:hover a { background: none; color:#333; }
 
+    }
+
+    .payByShare {
+        width: 900px;
     }
 
 }
